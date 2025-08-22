@@ -3,7 +3,12 @@
         <div id="left">
             <h1 id="title">
                 <span class="line line-1">{{ line1 }}</span>
-                <span class="line line-2">{{ line2 }}</span>
+                <span class="line line-2">
+                    in <span class="typewriter-container">
+                        <span class="typewriter-text" ref="typewriterRef"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                </span>
             </h1>
             <p id="sub-title" v-if="width > 1049">{{ subTitle }}</p>
             <BasicButton :text="'Sign up for free'" :type="2" v-if="width > 1049" />
@@ -20,19 +25,81 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import { gsap } from 'gsap';
 
 const width = ref(window.innerWidth);
 const heroRef = ref(null);
+const typewriterRef = ref(null);
 const line1 = 'Driving Digital Innovation';
-const line2 = 'in Healthcare & Beyond';
-const subTitle = 'At Kaizen Technology, we’ve grown from healthcare SaaS specialists into a full-service digital partner. We design websites, apps, booking systems, and provide SEO, social media, and branding — delivering end-to-end solutions that drive growth.';
+const subTitle = 'At Kaizen Technology, we\'ve grown from healthcare SaaS specialists into a full-service digital partner. We design websites, apps, booking systems, and provide SEO, social media, and branding — delivering end-to-end solutions that drive growth.';
+
+// Words to cycle through in the typewriter effect
+const words = ['Healthcare', 'E-Commerce', 'Mobile Apps', 'Software Dev', 'Social Media'];
+let currentWordIndex = 0;
+let typewriterTimeline = null;
 
 window.addEventListener('resize', (e) => {
     width.value = window.innerWidth;
 });
 
-// removed GSAP animation
+const startTypewriterEffect = () => {
+    if (!typewriterRef.value) return;
+    
+    const typewriterElement = typewriterRef.value;
+    
+    const animateWord = (word) => {
+        return new Promise((resolve) => {
+            // Clear the element
+            typewriterElement.textContent = '';
+            
+            // Type out the word character by character
+            const chars = word.split('');
+            let currentText = '';
+            
+            const typeInterval = setInterval(() => {
+                if (chars.length === 0) {
+                    clearInterval(typeInterval);
+                    // Wait a bit before starting to delete
+                    setTimeout(() => {
+                        // Delete the word character by character
+                        const deleteInterval = setInterval(() => {
+                            if (currentText.length === 0) {
+                                clearInterval(deleteInterval);
+                                resolve();
+                            } else {
+                                currentText = currentText.slice(0, -1);
+                                typewriterElement.textContent = currentText;
+                            }
+                        }, 50); // Delete speed
+                    }, 2000); // Wait time before deleting
+                } else {
+                    currentText += chars.shift();
+                    typewriterElement.textContent = currentText;
+                }
+            }, 100); // Type speed
+        });
+    };
+    
+    const cycleWords = async () => {
+        while (true) {
+            await animateWord(words[currentWordIndex]);
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+        }
+    };
+    
+    cycleWords();
+};
+
+onMounted(() => {
+    startTypewriterEffect();
+});
+
+onUnmounted(() => {
+    if (typewriterTimeline) {
+        typewriterTimeline.kill();
+    }
+});
 </script>
 
 <style scoped>
@@ -63,6 +130,29 @@ window.addEventListener('resize', (e) => {
 
 .line { display: block; }
 
+.typewriter-container {
+    display: inline-block;
+    min-width: 300px; /* Adjust this value based on your longest word */
+    color: #4682b4;
+    font-weight: bold;
+}
+
+.typewriter-text {
+    color: #4682b4;
+    font-weight: bold;
+}
+
+.cursor {
+    color: #000;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 /* remove sweep layers */
 
 #right {
@@ -91,6 +181,10 @@ window.addEventListener('resize', (e) => {
 
     #left #title {
         text-align: center;
+    }
+
+    .typewriter-container {
+        min-width: 180px; /* Reduced min-width for mobile to fix spacing */
     }
 
     #right {
@@ -128,6 +222,10 @@ window.addEventListener('resize', (e) => {
 
     .home-hero {
         margin: 24px 0 50px;
+    }
+
+    .typewriter-container {
+        min-width: 140px; /* Further reduced for very small screens */
     }
 
     #right .icon img {
