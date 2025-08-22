@@ -6,7 +6,7 @@
                 <p id="desc">
                     {{ desc }}
                 </p>
-                <BasicButton :text="'Get your free proposal'" :type="2" />
+                <BasicButton :text="'Get your free consultation'" :type="2" />
             </div>
             <picture id="icon" v-html="icon">
             </picture>
@@ -29,16 +29,7 @@ const props = defineProps({
 }
 
 .simple-action-card::before {
-    content: '';
-    aspect-ratio: 1;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    height: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.2s;
+    display: none;
 }
 
 .container {
@@ -68,25 +59,23 @@ const props = defineProps({
 
 #icon {
     position: absolute;
-    top: -30px;
-    right: 0;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
     transition: 0.2s;
     z-index: 1;
 }
 
 /* LISTENERS */
-.simple-action-card:hover::before {
-    height: 200px;
-}
 
 #icon:hover {
-    transform: translateY(-10px);
+    transform: translateY(-60%);
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 1220px) {
     #icon {
-        right: -80px;
+        right: 5%;
     }
 }
 
@@ -122,20 +111,32 @@ const props = defineProps({
 
 @media screen and (max-width: 620px) {
     .action-info {
-        --padding: 60px;
-
+        --padding: 30px;
         align-items: initial;
-        max-width: 90%;
+        max-width: 100%;
+    }
+
+    .container {
+        margin: 0 10px;
+        border-radius: 25px;
     }
 
     #icon {
         min-width: max-content;
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .container {
         padding-bottom: 0;
+        margin: 0 5px;
+        border-radius: 20px;
+    }
+
+    .action-info {
+        --padding: 20px;
     }
 
     #icon {
