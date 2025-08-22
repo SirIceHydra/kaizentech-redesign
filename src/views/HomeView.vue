@@ -4,6 +4,7 @@
         <LogoCarousel :logos="logos"></LogoCarousel>
         <ServiceSection />
         <ActionContact />
+        <CaseStudiesDuplicate />
         <CaseStudies />
         <WorkingProcess />
         <Team />
@@ -19,6 +20,7 @@ import LogoCarousel from '@/components/Carousel/LogoCarousel/LogoCarousel.vue';
 import ServiceSection from '@/components/Sections/ServiceSection/ServiceSection.vue';
 import ActionContact from '@/components/Sections/ActionContact/ActionContact.vue';
 import CaseStudies from '@/components/Sections/CaseStudies/CaseStudies.vue';
+import CaseStudiesDuplicate from '@/components/Sections/CaseStudiesDuplicate/CaseStudiesDuplicate.vue';
 import WorkingProcess from '@/components/Sections/WorkingProcess/WorkingProcess.vue';
 import Team from '@/components/Sections/Team/Team.vue';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials.vue';
