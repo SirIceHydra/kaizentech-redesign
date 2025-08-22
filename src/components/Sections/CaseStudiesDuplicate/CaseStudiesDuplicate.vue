@@ -7,17 +7,17 @@
             <!-- Row 1 -->
             <UseCaseCard :id="'left'" :image="'/assets/Projects_DrPayal.png'" :icon="'/assets/DrPayalLogo.png'"
                 :client="'Dr Payal'" :desc="'GP Website'" />
-            <UseCaseCard :id="'middle'" :image="'/assets/Projects_Safiyah.png'" :icon="'/assets/SafiyahLogo.png'"
-                :client="'SH Dietitians'" :desc="'Dietitian Website'" />
-            <UseCaseCard :id="'right'" :image="'/img/img-3.png'" :icon="'/logo/logo-hubspot.svg'"
-                :client="'HubSpot'" :desc="'React Native'" />
+            <UseCaseCard :id="'middle'" :image="'/assets/Projects_Womanon.png'" :icon="'/assets/WomanonLogo.jpg'"
+                :client="'Womanon'" :desc="'Womens Health Website'" />
+            <UseCaseCard :id="'right'" :image="'/assets/Projects_DrMishqah.png'" :icon="'/assets/MishqahLogo.png'"
+                :client="'Dr Mishqah'" :desc="'Dentist Website'" />
             <!-- Row 2 -->
-            <UseCaseCard :id="'left-2'" :image="'/img/img-4.png'" :icon="'/logo/logo-notion.svg'"
-                :client="'Notion'" :desc="'iOS'" />
-            <UseCaseCard :id="'middle-2'" :image="'/img/img-5.png'" :icon="'/logo/logo-netflix.svg'"
-                :client="'Netflix'" :desc="'Android'" />
-            <UseCaseCard :id="'right-2'" :image="'/img/img-6.png'" :icon="'/logo/logo-zoom.svg'"
-                :client="'Zoom'" :desc="'Web'" />
+            <UseCaseCard :id="'left-2'" :image="'/assets/Projects_Safiyah.png'" :icon="'/assets/SafiyahLogo.png'"
+                :client="'SH Dietitians'" :desc="'Dietitian Website'" />
+            <UseCaseCard :id="'middle-2'" :image="'/assets/Projects_Womany.png'" :icon="'/assets/WomanyLogo.jpg'"
+                :client="'Womany'" :desc="'Womans Health Website'" />
+            <UseCaseCard :id="'right-2'" :image="'/assets/Projects_Invictus.png'" :icon="'/assets/Invictus.png'"
+                :client="'Invictus Nutrition'" :desc="'E-Commerce Website'" />
         </UseCase>
     </section>
 </template>

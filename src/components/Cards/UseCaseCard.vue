@@ -38,7 +38,7 @@ const props = defineProps({
 }
 
 .project-image {
-    background-color: #101113;
+    background-color: transparent;
     border-radius: 18px;
     height: 300px;
     overflow: hidden;
@@ -55,9 +55,7 @@ const props = defineProps({
 }
 
 .project-meta {
-    background-color: rgba(255, 255, 255, 0.04);
-    border-radius: 18px;
-    padding: 18px;
+    padding: 0;
     margin-top: 16px;
     display: flex;
     align-items: center;
@@ -70,12 +68,12 @@ const props = defineProps({
 }
 
 .client-icon {
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
-    background-color: #0d0f11;
+    background-color: transparent;
     border-radius: 10px;
-    padding: 6px;
+    padding: 0;
 }
 
 .client-name {

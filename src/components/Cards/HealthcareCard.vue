@@ -101,7 +101,7 @@ const props = defineProps({
     padding: 30px;
     border-left: 2px solid var(--secondary-color);
     border-right: 2px solid var(--secondary-color);
-    margin: 0 20px;
+    margin: 0;
 }
 
 /* RESPONSIVE */
