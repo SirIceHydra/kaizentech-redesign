@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.kaizentech.co.za/
+
+# Sitemaps
+Sitemap: https://www.kaizentech.co.za/sitemap.xml

@@ -1,0 +1,81 @@
+@import './css-reset-jc.css';
+
+@font-face {
+    font-family: 'SuisseIntl';
+    src: url('/fonts/fonnts.com-SuisseIntl-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-family: 'SuisseIntl', sans-serif;
+    font-family: var(--font-family);
+    --primary-color: #4682b4;
+    --secondary-color: #191A23;
+    --accent-color: #F3F3F3;
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --highlight-color: #611e69;
+}
+
+html {
+    font-family: var(--font-family);
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-family);
+    min-height: 100dvh;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection {
+    background-color: var(--primary-color);
+}
+
+button {
+    cursor: pointer;
+}
+
+#app {
+    max-width: 1366px;
+    width: 100%;
+}
+
+#vanta-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
