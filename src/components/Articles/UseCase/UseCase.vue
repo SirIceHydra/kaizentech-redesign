@@ -20,14 +20,32 @@
     width: 100%;
     border-radius: 45px;
     padding: 60px;
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 40px 120px;
+    position: relative;
+    /* Bright floating separators: 2 vertical, 1 horizontal (not touching edges) */
+    background-image:
+        linear-gradient(to right, #ffffff, #ffffff),
+        linear-gradient(to right, #ffffff, #ffffff),
+        linear-gradient(to bottom, #ffffff, #ffffff);
+    /* inset 60px from each edge (matches padding) */
+    background-size: 1px calc(100% - 120px), 1px calc(100% - 120px), calc(100% - 120px) 1px;
+    /* verticals centered in column gaps; horizontal centered between rows */
+    background-position:
+        calc(((100% - 240px) / 3) + 60px) 60px,
+        calc((2 * ((100% - 240px) / 3)) + 180px) 60px,
+        60px calc(50%);
+    background-repeat: no-repeat;
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 920px) {
     .wrapper {
+        display: flex;
         flex-direction: column;
+        background-image: none;
     }
 }
 

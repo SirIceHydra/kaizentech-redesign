@@ -1,15 +1,23 @@
 <template>
     <section id="action-contact">
-        <SectionTitle :title="'Case Studies'"
-            :desc="'Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies'"
+        <SectionTitle :title="'Our Projects'"
+            :desc="'Explore our web design projects—tailored to client goals, fully responsive across devices, and built with SEO best practices.'"
             class="title" />
         <UseCase>
-            <UseCaseCard :id="'left'"
-                :text="'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'" />
-            <UseCaseCard
-                :text="'For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.'" />
-            <UseCaseCard :id="'right'"
-                :text="'For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.'" />
+            <!-- Row 1 -->
+            <UseCaseCard :id="'left'" :image="'/assets/Projects_DrPayal.png'" :icon="'/assets/DrPayalLogo.png'"
+                :client="'Dr Payal'" :desc="'GP Website'" />
+            <UseCaseCard :id="'middle'" :image="'/assets/Projects_Safiyah.png'" :icon="'/assets/SafiyahLogo.png'"
+                :client="'SH Dietitians'" :desc="'Dietitian Website'" />
+            <UseCaseCard :id="'right'" :image="'/img/img-3.png'" :icon="'/logo/logo-hubspot.svg'"
+                :client="'HubSpot'" :desc="'React Native'" />
+            <!-- Row 2 -->
+            <UseCaseCard :id="'left-2'" :image="'/img/img-4.png'" :icon="'/logo/logo-notion.svg'"
+                :client="'Notion'" :desc="'iOS'" />
+            <UseCaseCard :id="'middle-2'" :image="'/img/img-5.png'" :icon="'/logo/logo-netflix.svg'"
+                :client="'Netflix'" :desc="'Android'" />
+            <UseCaseCard :id="'right-2'" :image="'/img/img-6.png'" :icon="'/logo/logo-zoom.svg'"
+                :client="'Zoom'" :desc="'Web'" />
         </UseCase>
     </section>
 </template>

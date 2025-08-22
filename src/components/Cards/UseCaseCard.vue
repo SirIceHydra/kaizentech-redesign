@@ -1,60 +1,98 @@
 <template>
-    <div class="component use-case-card-btn" :id="id">
-        <p id="text">
-            {{ text }}
-        </p>
-        <SimpleLinkButton />
+    <div class="component project-card" :id="id">
+        <div class="project-image">
+            <img :src="image" :alt="client + ' project preview'" />
+        </div>
+        <div class="project-meta">
+            <div class="client">
+                <img class="client-icon" :src="icon" :alt="client + ' logo'" />
+                <div class="client-texts">
+                    <h4 class="client-name">{{ client }}</h4>
+                    <p class="client-desc">{{ desc }}</p>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </template>
 
 <script setup>
 import { defineProps } from 'vue';
-import SimpleLinkButton from '../Buttons/SimpleLinkButton/SimpleLinkButton.vue';
 
 const props = defineProps({
     id: { type: String, default: 'middle' },
-    text: { type: String, default: 'This is a placeholder to be changed!' }
+    image: { type: String, default: '/img/img-1.png' },
+    icon: { type: String, default: '/logo/logo-white.svg' },
+    client: { type: String, default: 'Client' },
+    desc: { type: String, default: 'GP Website' }
 });
 </script>
 
 <style scoped>
-.use-case-card-btn {
-    width: 30%;
-    min-width: 0px;
+.project-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: space-between;
+    min-width: 0;
+    align-items: stretch;
 }
 
-#text {
+.project-image {
+    background-color: #101113;
+    border-radius: 18px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-meta {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.client-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: #0d0f11;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.client-name {
     color: var(--white);
+    margin: 0;
 }
 
-#middle {
-    padding: 0 50px;
-    border-left: 2px solid var(--white);
-    border-right: 2px solid var(--white);
+.client-desc {
+    color: var(--white);
+    opacity: 0.7;
+    margin: 4px 0 0 0;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media screen and (max-width: 920px) {
-    .use-case-card-btn {
+    .project-card {
         width: 100%;
-        min-width: 0px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: space-between;
-    }
-
-    #middle {
-        border-left: 0;
-        border-right: 0;
-        border-top: 2px solid var(--white);
-        border-bottom: 2px solid var(--white);
-        padding: 50px 0;
-
     }
 }
 </style>
