@@ -2,7 +2,6 @@
     <button class="component hamburger-btn" aria-label="Open menu">
         <span class="hr"></span>
         <span class="hr"></span>
-        <span class="hr"></span>
     </button>
 </template>
 
@@ -26,7 +25,7 @@
 .hamburger-btn .hr {
     background-color: #191A23;
     width: 30px;
-    height: 5px;
+    height: 2px;
     transition: 0.2s;
 }
 

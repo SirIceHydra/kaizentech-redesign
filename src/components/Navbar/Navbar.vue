@@ -8,23 +8,26 @@
         <div id="right">
             <ul id="links">
                 <li class="link">
-                    <NavLinkButton :text="'About'" />
-                </li>
-                <li class="link">
                     <NavLinkButton :text="'Services'" />
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Use Cases'" />
+                    <NavLinkButton :text="'Projects'" />
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Pricing'" />
+                    <NavLinkButton :text="'Software'" />
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Blog'" />
+                    <NavLinkButton :text="'FAQs'" />
+                </li>
+                <li class="link">
+                    <NavLinkButton :text="'Help'" />
+                </li>
+                <li class="link">
+                    <NavLinkButton :text="'Login'" />
                 </li>
                 <li class="link">
                     <a href="https://github.com/Poufles/vue-olga-positivus" target="_blank">
-                        <BasicButton :text="'Request a quote'" :type="1" />
+                        <BasicButton :text="'Get started free'" :type="1" />
                     </a>
                 </li>
             </ul>
@@ -37,6 +40,7 @@
 import Logo from '../Logo/Logo.vue';
 import NavLinkButton from '../Buttons/NavLinkButton/NavLinkButton.vue';
 import Hamburger from '../Buttons/Hamburger/Hamburger.vue';
+import BasicButton from '../Buttons/BasicButton/BasicButton.vue';
 
 const props = defineProps({
     isMobile: { type: Boolean },
@@ -144,7 +148,9 @@ const emit = defineEmits([ 'openNavbarPanel' ]);
     display: none !important;
 }
 
-/* Make Request a quote button text turn white on hover */
+
+
+/* Make Get started free button text turn white on hover */
 #right a:hover :deep(.basic-btn #text) {
     color: var(--white);
 }
@@ -158,5 +164,30 @@ const emit = defineEmits([ 'openNavbarPanel' ]);
 
 #right a :deep(.basic-btn #text) {
     font-size: 16px;
+}
+
+/* Responsive adjustments for navbar with additional items */
+@media screen and (max-width: 1200px) {
+    #right #links {
+        gap: 20px;
+    }
+    
+    #right a :deep(.basic-btn) {
+        padding: 0 18px;
+    }
+    
+    #right a :deep(.basic-btn #text) {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #right #links {
+        gap: 16px;
+    }
+    
+    #right a :deep(.basic-btn) {
+        padding: 0 16px;
+    }
 }
 </style>

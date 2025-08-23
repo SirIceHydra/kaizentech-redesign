@@ -3,23 +3,26 @@
         <ul id="links" v-if="isMobile" @click.stop>
             <button class="close-btn" aria-label="Close" @click.stop="emits('closeNavbarPanel')">×</button>
             <li class="link">
-                <NavLinkButton :text="'About'" />
-            </li>
-            <li class="link">
                 <NavLinkButton :text="'Services'" />
             </li>
             <li class="link">
-                <NavLinkButton :text="'Use Cases'" />
+                <NavLinkButton :text="'Projects'" />
             </li>
             <li class="link">
-                <NavLinkButton :text="'Pricing'" />
+                <NavLinkButton :text="'Software'" />
             </li>
             <li class="link">
-                <NavLinkButton :text="'Blog'" />
+                <NavLinkButton :text="'FAQs'" />
+            </li>
+            <li class="link">
+                <NavLinkButton :text="'Help'" />
+            </li>
+            <li class="link">
+                <NavLinkButton :text="'Login'" />
             </li>
             <li class="link">
                 <a href="https://github.com/Poufles/vue-olga-positivus" target="_blank">
-                    <BasicButton :text="'Request a quote'" :type="1" />
+                    <BasicButton :text="'Get started free'" :type="1" />
                 </a>
             </li>
         </ul>
@@ -29,6 +32,7 @@
 <script setup>
 import Hamburger from '../Buttons/Hamburger/Hamburger.vue';
 import NavLinkButton from '../Buttons/NavLinkButton/NavLinkButton.vue';
+import BasicButton from '../Buttons/BasicButton/BasicButton.vue';
 
 const props = defineProps({
     isMobile: Boolean,
@@ -107,6 +111,8 @@ const emits = defineEmits(['closeNavbarPanel']);
     cursor: pointer;
     z-index: 1600;
 }
+
+
 
 /* RESPONSIVE */
 @media screen and (max-width: 620px) {
