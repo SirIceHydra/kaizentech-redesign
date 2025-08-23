@@ -26,37 +26,37 @@ import Team from '@/components/Sections/Team/Team.vue';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials.vue';
 import ContactAccess from '@/components/Sections/ContactAccess/ContactAccess.vue';
 
-import amazonLogo from '/logo/logo-amazon.svg?raw';
-import dribbleLogo from '/logo/logo-dribble.svg?raw';
-import hubspotLogo from '/logo/logo-hubspot.svg?raw';
-import notionLogo from '/logo/logo-notion.svg?raw';
-import netflixLogo from '/logo/logo-netflix.svg?raw';
-import zoomLogo from '/logo/logo-zoom.svg?raw';
+import redgumLogo from '/assets/Redgum.svg?raw';
+import dmcLogo from '/assets/DMC.svg?raw';
+import invictusLogo from '/logo-banner/Invictus.svg?raw';
+import noBgBlackLogo from '/logo-banner/noBgBlack.svg?raw';
+import womanyLogo from '/logo-banner/WOMANY(2).svg?raw';
 
+// Since we only have 5 SVG files, let's use img tags for the PNG
 const logos = [
     {
-        logo: amazonLogo,
-        id: 'amazon'
+        logo: redgumLogo,
+        id: 'redgum'
     },
     {
-        logo: dribbleLogo,
-        id: 'dribble'
+        logo: dmcLogo,
+        id: 'dmc'
     },
     {
-        logo: hubspotLogo,
-        id: 'hubspot'
+        logo: invictusLogo,
+        id: 'invictus'
     },
     {
-        logo: notionLogo,
-        id: 'notion'
+        logo: noBgBlackLogo,
+        id: 'nobg-black'
     },
     {
-        logo: netflixLogo,
-        id: 'netflix'
+        logo: womanyLogo,
+        id: 'womany'
     },
     {
-        logo: zoomLogo,
-        id: 'zoom'
+        logo: '<img src="/logo-banner/mishqah-logo.6499a9a778f3106d6e2b.png" alt="Mishqah logo" style="max-height: 100%; max-width: 100%; object-fit: contain;" />',
+        id: 'mishqah'
     }
 ];
 </script>

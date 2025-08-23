@@ -10,16 +10,7 @@
                 </picture>
             </div>
         </div>
-        <div class="layer" id="bottom-layer" v-if="isMobile">
-            <div class="logo-container alt">
-                <picture class="logo" v-for="(logo) in logosReversed" v-html="logo.logo" :id="`logo-${logo.id}-alt`">
-                </picture>
-            </div>
-            <div class="logo-container alt copy">
-                <picture class="logo" v-for="(logo) in logosReversed" v-html="logo.logo" :id="`logo-${logo.id}-alt`">
-                </picture>
-            </div>
-        </div>
+
     </div>
 </template>
 
@@ -53,15 +44,16 @@ window.addEventListener('resize', (e) => {
 
 function CheckSize() {
     componentWidth.value = component.value.getBoundingClientRect().width;
-
-    if (componentWidth.value < layerWidth.value - 1) isMobile.value = true;
+    
+    // Use screen width instead of container comparison to determine mobile
+    if (window.innerWidth < 1120) isMobile.value = true;
     else isMobile.value = false;
 };
 </script>
 
 <style scoped>
 .logo-carousel {
-    margin-bottom: 125px;
+    margin-bottom: 70px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -89,18 +81,40 @@ function CheckSize() {
     animation: slide linear infinite 20s;
 }
 
-.logo-carousel.running .logo-container.alt {
-    display: inline-block;
-    animation: slide_alt linear infinite 20s;
-}
+
 
 .logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.2s;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    height: 60px;
+    width: 160px;
+    overflow: hidden;
+}
+
+.logo :deep(svg),
+.logo :deep(img) {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Redgum logo positioning */
+#logo-redgum :deep(svg) {
+    transform: translateY(-8px);
+}
+
+/* Mishqah logo needs to be 1.5x larger and moved down */
+#logo-mishqah :deep(img) {
+    transform: scale(2.0) translateY(2px);
 }
 
 .logo-carousel.running .logo {
     filter: grayscale(100%);
+    opacity: 0.6;
 }
 
 .logo:not(:first-of-type) {
@@ -121,17 +135,53 @@ function CheckSize() {
     }
 }
 
-@keyframes slide_alt {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
-}
+
 
 /* LISTENER */
+.logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 .logo-carousel.running .logo:hover {
     filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Mobile responsive sizing */
+@media screen and (max-width: 620px) {
+    .logo-carousel {
+        margin-bottom: 50px;
+    }
+    
+    .logo {
+        height: 45px;
+        width: 120px;
+    }
+    
+    .logo :deep(svg),
+    .logo :deep(img) {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    /* Redgum logo positioning on mobile */
+    #logo-redgum :deep(svg) {
+        transform: translateY(-6px);
+    }
+    
+    /* Mishqah logo needs to be 1.5x larger and moved down on mobile too */
+    #logo-mishqah :deep(img) {
+        transform: scale(2.0) translateY(4px);
+    }
+    
+    .logo:not(:first-of-type) {
+        margin-left: 40px;
+    }
+    
+    .logo-carousel.running .logo {
+        margin: 0 20px;
+    }
 }
 </style>
