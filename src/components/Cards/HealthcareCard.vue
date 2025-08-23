@@ -1,17 +1,20 @@
 <template>
-    <div class="component healthcare-card" :id="id">
-        <div class="image-container" v-if="image">
-            <img :src="image" :alt="title || 'Feature illustration'" />
-        </div>
-        <div class="content">
-            <div class="text-content">
-                <h3 v-if="title" id="title">{{ title }}</h3>
-                <p id="text">
-                    {{ text }}
-                </p>
+    <div class="component healthcare-card-wrapper" :id="id">
+        <div class="shadow"></div>
+        <div class="healthcare-card">
+            <div class="image-container" v-if="image">
+                <img :src="image" :alt="title || 'Feature illustration'" />
             </div>
-            <div class="button-container">
-                <SimpleLinkButton />
+            <div class="content">
+                <div class="text-content">
+                    <h3 v-if="title" id="title">{{ title }}</h3>
+                    <p id="text">
+                        {{ text }}
+                    </p>
+                </div>
+                <div class="button-container">
+                    <SimpleLinkButton />
+                </div>
             </div>
         </div>
     </div>
@@ -30,18 +33,39 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.healthcare-card {
+.healthcare-card-wrapper {
     width: 30%;
     min-width: 0px;
+    height: 700px; /* Fixed height - same for all cards */
+    position: relative;
+}
+
+.healthcare-card-wrapper .shadow {
+    background-color: var(--secondary-color);
+    content: '';
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0%;
+    transform: translateX(-0%);
+    transition-property: opacity, width;
+    transition-duration: 0.2s, 0.2s;
+    z-index: -1;
+}
+
+.healthcare-card {
     display: grid;
     grid-template-rows: 200px 100px 1fr 50px; /* Fixed grid: image | title | text | button */
     background-color: var(--gray);
     border-radius: 20px;
     padding: 30px;
     border: 2px solid var(--secondary-color);
-    height: 700px; /* Fixed height - same for all cards */
+    height: 100%; /* Fill the wrapper */
     box-sizing: border-box;
     gap: 0;
+    transition: 0.2s;
 }
 
 .image-container {
@@ -104,12 +128,27 @@ const props = defineProps({
     margin: 0;
 }
 
+/* HOVER EFFECTS */
+.healthcare-card-wrapper:hover .healthcare-card {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.healthcare-card-wrapper:hover .shadow {
+    opacity: 0.7;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 920px) {
-    .healthcare-card {
+    .healthcare-card-wrapper {
         width: 100%;
         height: auto;
         margin-bottom: 30px;
+    }
+    
+    .healthcare-card {
         display: flex;
         flex-direction: column;
         gap: 20px;

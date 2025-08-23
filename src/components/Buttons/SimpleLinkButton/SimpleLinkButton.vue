@@ -35,7 +35,7 @@ function Animate() {
 
 .simple-link-btn::before {
     content: '';
-    background-color: var(--white);
+    background-color: var(--secondary-color);
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     height: calc(100% + 5px);
@@ -76,6 +76,6 @@ svg {
 }
 
 .simple-link-btn:hover #learn {
-    color: var(--secondary-color);
+    color: var(--white);
 }
 </style>
