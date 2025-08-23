@@ -85,9 +85,8 @@ const navigateToDetail = (slug) => {
 
 <style scoped>
 #help-section {
-    padding: 70px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 70px 0;
+    width: 100%;
 }
 
 .title {
@@ -97,9 +96,8 @@ const navigateToDetail = (slug) => {
 .help-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 60px;
+    width: 100%;
     align-items: start;
 }
 
@@ -107,18 +105,20 @@ const navigateToDetail = (slug) => {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    display: flex;
 }
 
 .help-card-wrapper.full-width {
-    grid-column: 1 / -1;
-    max-width: 580px;
-    margin: 0 auto;
+    grid-column: 1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 920px) {
     #help-section {
-        padding: 50px 30px;
+        padding: 50px 0;
     }
     
     .title {
@@ -127,24 +127,24 @@ const navigateToDetail = (slug) => {
     
     .help-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-        max-width: 600px;
+        gap: 40px;
+        width: 100%;
     }
     
     .help-card-wrapper.full-width {
         grid-column: 1;
-        max-width: 100%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 620px) {
     #help-section {
-        padding: 40px 20px;
+        padding: 40px 0;
     }
     
     .help-grid {
-        gap: 20px;
-        max-width: 100%;
+        gap: 30px;
+        width: 100%;
     }
 }
 </style>

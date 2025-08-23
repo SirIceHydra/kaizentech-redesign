@@ -40,6 +40,11 @@ const props = defineProps({
 
 #desc {
     max-width: 600px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    opacity: 0.8;
+    line-height: 1.5;
 }
 
 /* RESPONSIVE */
