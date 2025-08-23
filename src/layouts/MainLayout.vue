@@ -40,26 +40,24 @@ function CheckWidth() {
 
 function CheckNavbarPanelActive() {
     if (isOpenNavbarPanel.value) {
-        const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-        document.body.setAttribute('data-scroll-y', String(scrollY));
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.left = '0';
-        document.body.style.right = '0';
-        document.body.style.width = '100%';
+        // Prevent background scrolling without visual displacement
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = getScrollbarWidth() + 'px';
     } else {
-        const saved = document.body.getAttribute('data-scroll-y');
-        document.body.removeAttribute('data-scroll-y');
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.left = '';
-        document.body.style.right = '';
-        document.body.style.width = '';
-        if (saved) {
-            const y = parseInt(saved, 10) || 0;
-            window.scrollTo(0, y);
-        }
+        // Restore scrolling
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
     };
+};
+
+// Helper function to calculate scrollbar width to prevent layout shift
+function getScrollbarWidth() {
+    const scrollDiv = document.createElement('div');
+    scrollDiv.style.cssText = 'width: 100px; height: 100px; overflow: scroll; position: absolute; top: -9999px;';
+    document.body.appendChild(scrollDiv);
+    const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+    return scrollbarWidth;
 };
 </script>
 
