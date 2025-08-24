@@ -36,11 +36,13 @@
                     </picture>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61579457152761" target="_blank" rel="noopener noreferrer">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M30 15.0913C30 6.75456 23.2863 0 15 0C6.71371 0 0 6.75456 0 15.0913C0 22.6369 5.44355 28.9047 12.6411 30V19.4726H8.83064V15.0913H12.6411V11.8053C12.6411 8.03245 14.879 5.90264 18.2661 5.90264C19.9597 5.90264 21.6532 6.2069 21.6532 6.2069V9.91886H19.7782C17.9032 9.91886 17.2984 11.0751 17.2984 12.2921V15.0913H21.4718L20.8065 19.4726H17.2984V30C24.496 28.9047 30 22.6369 30 15.0913Z"
-                            fill="white" />
-                    </svg>
+                    <picture class="component logo">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 8.5C17 3.8 13.2 0 8.5 0S0 3.8 0 8.5C0 12.7 3.1 16.1 7.2 16.9V11H5.1V8.5H7.2V6.6C7.2 4.5 8.3 3.4 10.3 3.4C11.2 3.4 12.2 3.6 12.2 3.6V5.6H11.1C10 5.6 9.7 6.2 9.7 6.9V8.5H12.1L11.7 11H9.7V16.9C13.8 16.1 17 12.7 17 8.5Z"
+                                fill="white" />
+                        </svg>
+                    </picture>
                 </a>
                 <a href="https://www.instagram.com/kaizentechnologyza/" target="_blank" rel="noopener noreferrer">
                     <picture class="component logo">
@@ -86,11 +88,13 @@
                 </picture>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61579457152761" target="_blank" rel="noopener noreferrer">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M30 15.0913C30 6.75456 23.2863 0 15 0C6.71371 0 0 6.75456 0 15.0913C0 22.6369 5.44355 28.9047 12.6411 30V19.4726H8.83064V15.0913H12.6411V11.8053C12.6411 8.03245 14.879 5.90264 18.2661 5.90264C19.9597 5.90264 21.6532 6.2069 21.6532 6.2069V9.91886H19.7782C17.9032 9.91886 17.2984 11.0751 17.2984 12.2921V15.0913H21.4718L20.8065 19.4726H17.2984V30C24.496 28.9047 30 22.6369 30 15.0913Z"
-                        fill="white" />
-                </svg>
+                <picture class="component logo">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17 8.5C17 3.8 13.2 0 8.5 0S0 3.8 0 8.5C0 12.7 3.1 16.1 7.2 16.9V11H5.1V8.5H7.2V6.6C7.2 4.5 8.3 3.4 10.3 3.4C11.2 3.4 12.2 3.6 12.2 3.6V5.6H11.1C10 5.6 9.7 6.2 9.7 6.9V8.5H12.1L11.7 11H9.7V16.9C13.8 16.1 17 12.7 17 8.5Z"
+                            fill="white" />
+                    </svg>
+                </picture>
             </a>
             <a href="https://www.instagram.com/kaizentechnologyza/" target="_blank" rel="noopener noreferrer">
                 <picture class="component logo">
