@@ -1,5 +1,5 @@
 <template>
-    <section id="action-contact">
+    <section id="software">
         <SectionTitle :title="'Healthcare Software'"
             :desc="'Simplified Patient Booking and Management System for Doctors'"
             class="title" />

@@ -102,4 +102,17 @@ const router = createRouter({
   ],
 });
 
+// Navigation guard to scroll to top when navigating to help page
+router.beforeEach((to, from, next) => {
+  if (to.name === 'help') {
+    // Scroll to top after navigation
+    next();
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  } else {
+    next();
+  }
+});
+
 export default router;

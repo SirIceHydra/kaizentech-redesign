@@ -1,5 +1,5 @@
 <template>
-    <section id="action-contact">
+    <section id="projects">
         <SectionTitle :title="'Our Projects'"
             :desc="'Explore our web design projects—tailored to client goals, fully responsive across devices, and built with SEO best practices.'"
             class="title" />

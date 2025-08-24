@@ -8,25 +8,37 @@
         <div id="right">
             <ul id="links">
                 <li class="link">
-                    <NavLinkButton :text="'Services'" />
+                    <a href="#services" @click="scrollToSection('services')">
+                        <NavLinkButton :text="'Services'" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Projects'" />
+                    <a href="#projects" @click="scrollToSection('projects')">
+                        <NavLinkButton :text="'Projects'" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Software'" />
+                    <a href="#software" @click="scrollToSection('software')">
+                        <NavLinkButton :text="'Software'" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'FAQs'" />
+                    <a href="#faq-section" @click="scrollToSection('faq-section')">
+                        <NavLinkButton :text="'FAQs'" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Help'" />
+                    <RouterLink :to="{ name: 'help' }">
+                        <NavLinkButton :text="'Help'" />
+                    </RouterLink>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Login'" />
+                    <a href="https://app.kaizenams.co.za/login/" target="_blank">
+                        <NavLinkButton :text="'Login'" />
+                    </a>
                 </li>
                 <li class="link">
-                    <a href="https://github.com/Poufles/vue-olga-positivus" target="_blank">
+                    <a href="https://app.kaizenams.co.za/signup/" target="_blank">
                         <BasicButton :text="'Get started free'" :type="1" />
                     </a>
                 </li>
@@ -48,6 +60,27 @@ const props = defineProps({
 });
 
 const emit = defineEmits([ 'openNavbarPanel' ]);
+
+const scrollToSection = (sectionId) => {
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+        window.location.href = `/#${sectionId}`;
+        return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Additional offset to ensure we're at the very top of the section
+        setTimeout(() => {
+            window.scrollBy(0, -120);
+        }, 100);
+    }
+};
 </script>
 
 <style scoped>
@@ -97,6 +130,30 @@ const emit = defineEmits([ 'openNavbarPanel' ]);
 #navbar::after {
     background-image: linear-gradient(transparent 0, rgba(255,255,255,0.08) 100%);
     opacity: 0.08;
+}
+
+/* Navigation link styles */
+#links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#links .link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ensure sections have proper scroll offset for fixed navbar */
+#services,
+#projects,
+#software,
+#faq-section,
+#help-section {
+    scroll-margin-top: 120px;
 }
 
 #left {
