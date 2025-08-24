@@ -6,8 +6,8 @@
         <ActionContact />
         <CaseStudiesDuplicate />
         <CaseStudies />
-        <WorkingProcess />
         <Team />
+        <WorkingProcess />
         <Testimonials />
         <ContactAccess />
     </MainLayout>

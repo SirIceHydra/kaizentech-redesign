@@ -72,7 +72,12 @@ const props = defineProps({
 }
 
 .info-card-template.type-4 .wrapper {
-    background-color: var(--white);
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.info-card-template.type-4 .shadow {
+    background-color: #808080;
 }
 
 /* LISTENERS */

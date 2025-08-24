@@ -80,9 +80,22 @@ const administrationArticles = [
 ];
 
 const navigateToArticle = (slug) => {
-    // For now, just log the navigation
-    console.log(`Navigate to: /help/administration/${slug}`);
-    // TODO: Implement individual article pages
+    switch (slug) {
+        case 'create-doctor':
+            router.push('/help/administration/create-doctor');
+            break;
+        case 'create-procedure':
+            router.push('/help/administration/create-procedure');
+            break;
+        case 'promote-doctor':
+            router.push('/help/administration/promote-doctor');
+            break;
+        case 'transfer-ownership':
+            router.push('/help/administration/transfer-ownership');
+            break;
+        default:
+            console.log(`Route not implemented for: ${slug}`);
+    }
 };
 </script>
 

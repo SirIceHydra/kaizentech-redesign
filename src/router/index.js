@@ -8,6 +8,10 @@ import HelpCancelAppointmentView from '@/views/HelpCancelAppointmentView.vue';
 import HelpAppointmentRequestsView from '@/views/HelpAppointmentRequestsView.vue';
 import HelpStaffManagementView from '@/views/HelpStaffManagementView.vue';
 import HelpAdministrationView from '@/views/HelpAdministrationView.vue';
+import HelpCreateDoctorView from '@/views/HelpCreateDoctorView.vue';
+import HelpCreateProcedureView from '@/views/HelpCreateProcedureView.vue';
+import HelpPromoteDoctorView from '@/views/HelpPromoteDoctorView.vue';
+import HelpTransferOwnershipView from '@/views/HelpTransferOwnershipView.vue';
 import HelpBillingView from '@/views/HelpBillingView.vue';
 import HelpAddingProfileView from '@/views/HelpAddingProfileView.vue';
 import HelpAddingWorkingHoursView from '@/views/HelpAddingWorkingHoursView.vue';
@@ -75,6 +79,26 @@ const router = createRouter({
       path: '/help/administration',
       name: 'help-administration',
       component: HelpAdministrationView,
+    },
+    {
+      path: '/help/administration/create-doctor',
+      name: 'help-create-doctor',
+      component: HelpCreateDoctorView,
+    },
+    {
+      path: '/help/administration/create-procedure',
+      name: 'help-create-procedure',
+      component: HelpCreateProcedureView,
+    },
+    {
+      path: '/help/administration/promote-doctor',
+      name: 'help-promote-doctor',
+      component: HelpPromoteDoctorView,
+    },
+    {
+      path: '/help/administration/transfer-ownership',
+      name: 'help-transfer-ownership',
+      component: HelpTransferOwnershipView,
     },
     {
       path: '/help/billing',
