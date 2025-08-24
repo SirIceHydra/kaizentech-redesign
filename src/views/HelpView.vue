@@ -75,11 +75,25 @@ const helpArticles = [
 ];
 
 const navigateToDetail = (slug) => {
-    if (slug === 'getting-started') {
-        router.push('/help/getting-started');
+    switch (slug) {
+        case 'getting-started':
+            router.push('/help/getting-started');
+            break;
+        case 'managing-appointments':
+            router.push('/help/managing-appointments');
+            break;
+        case 'staff-management':
+            router.push('/help/staff-management');
+            break;
+        case 'administration':
+            router.push('/help/administration');
+            break;
+        case 'billing':
+            router.push('/help/billing');
+            break;
+        default:
+            console.log(`Route not implemented for: ${slug}`);
     }
-    // For now, only getting-started is implemented
-    // TODO: Implement other help sections
 };
 </script>
 
