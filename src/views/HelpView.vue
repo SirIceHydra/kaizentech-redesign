@@ -109,24 +109,25 @@ const navigateToDetail = (slug) => {
 
 .help-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    width: 100%;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .help-card-wrapper {
-    width: 100%;
-    height: 100%;
     cursor: pointer;
-    display: flex;
+    transition: transform 0.2s ease;
+}
+
+.help-card-wrapper:hover {
+    transform: translateY(-5px);
 }
 
 .help-card-wrapper.full-width {
-    grid-column: 1;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 /* Mobile Responsive */
@@ -141,13 +142,8 @@ const navigateToDetail = (slug) => {
     
     .help-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
-        width: 100%;
-    }
-    
-    .help-card-wrapper.full-width {
-        grid-column: 1;
-        width: 100%;
+        gap: 20px;
+        padding: 0 20px;
     }
 }
 
@@ -157,8 +153,7 @@ const navigateToDetail = (slug) => {
     }
     
     .help-grid {
-        gap: 30px;
-        width: 100%;
+        padding: 0 15px;
     }
 }
 </style>

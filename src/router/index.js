@@ -13,6 +13,8 @@ import HelpAddingProfileView from '@/views/HelpAddingProfileView.vue';
 import HelpAddingWorkingHoursView from '@/views/HelpAddingWorkingHoursView.vue';
 import HelpManagingTimeOffView from '@/views/HelpManagingTimeOffView.vue';
 import HelpSubscriptionManagementView from '@/views/HelpSubscriptionManagementView.vue';
+import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
+import TermsOfServiceView from '@/views/TermsOfServiceView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -98,13 +100,23 @@ const router = createRouter({
       path: '/help/billing/subscription-management',
       name: 'help-subscription-management',
       component: HelpSubscriptionManagementView,
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: PrivacyPolicyView,
+    },
+    {
+      path: '/terms-of-service',
+      name: 'terms-of-service',
+      component: TermsOfServiceView,
     }
   ],
 });
 
-// Navigation guard to scroll to top when navigating to help page
+// Navigation guard to scroll to top when navigating to help page and policy pages
 router.beforeEach((to, from, next) => {
-  if (to.name === 'help') {
+  if (to.name === 'help' || to.name === 'privacy-policy' || to.name === 'terms-of-service') {
     // Scroll to top after navigation
     next();
     setTimeout(() => {

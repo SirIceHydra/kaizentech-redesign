@@ -22,7 +22,7 @@
                 </li>
             </ul>
             <div id="socials" v-if="!WidthMobile()">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/kaizen-tech-za/" target="_blank" rel="noopener noreferrer">
                     <picture class="component logo">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.317757 17H3.81308V5.68438H0.317757V17Z" fill="#191A23" />
@@ -35,52 +35,44 @@
                         </svg>
                     </picture>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=61579457152761" target="_blank" rel="noopener noreferrer">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M30 15.0913C30 6.75456 23.2863 0 15 0C6.71371 0 0 6.75456 0 15.0913C0 22.6369 5.44355 28.9047 12.6411 30V19.4726H8.83064V15.0913H12.6411V11.8053C12.6411 8.03245 14.879 5.90264 18.2661 5.90264C19.9597 5.90264 21.6532 6.2069 21.6532 6.2069V9.91886H19.7782C17.9032 9.91886 17.2984 11.0751 17.2984 12.2921V15.0913H21.4718L20.8065 19.4726H17.2984V30C24.496 28.9047 30 22.6369 30 15.0913Z"
                             fill="white" />
                     </svg>
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/kaizentechnologyza/" target="_blank" rel="noopener noreferrer">
                     <picture class="component logo">
-                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.9961 4.4915C16.6854 3.97449 17.3058 3.35409 17.7884 2.63028C17.168 2.90602 16.4442 3.11282 15.7204 3.18176C16.4786 2.73369 17.0301 2.04435 17.3058 1.18267C16.6165 1.59628 15.8238 1.90648 15.031 2.07881C14.3417 1.35501 13.4111 0.941406 12.3771 0.941406C10.378 0.941406 8.75804 2.56135 8.75804 4.56043C8.75804 4.83617 8.79251 5.1119 8.86144 5.38764C5.86282 5.2153 3.1744 3.76769 1.38212 1.59628C1.07192 2.11328 0.899586 2.73369 0.899586 3.42302C0.899586 4.66383 1.51999 5.76677 2.51953 6.42165C1.93359 6.38718 1.34766 6.24931 0.86512 5.97358V6.00804C0.86512 7.76585 2.10593 9.21346 3.76034 9.55813C3.48461 9.62707 3.13994 9.696 2.82973 9.696C2.58847 9.696 2.38166 9.66154 2.1404 9.62707C2.58847 11.0747 3.93267 12.1087 5.51815 12.1432C4.27734 13.1082 2.72633 13.6942 1.03745 13.6942C0.727252 13.6942 0.451517 13.6597 0.175781 13.6252C1.76126 14.6592 3.65694 15.2452 5.72495 15.2452C12.3771 15.2452 15.9961 9.76494 15.9961 4.97403C15.9961 4.8017 15.9961 4.66383 15.9961 4.4915Z"
-                                fill="black" />
-                        </svg>
+                        <img src="/logo/IG.svg" alt="Instagram" width="18" height="18" />
                     </picture>
                 </a>
             </div>
         </div>
         <div id="contacts">
-            <div id="physical-info">
-                <h4 id="contact-title">Contact Us</h4>
-                <p id="email-info">
-                    <span id="title">Email: </span>
-                    <span id="message">info@positivus.com</span>
-                </p>
-                <p id="phone-info">
-                    <span id="title">Phone: </span>
-                    <span id="message">555-567-8901</span>
-                </p>
-                <p id="address-info">
-                    <span id="title">Address: </span>
-                    <span id="message">1234 Main St
-                        Moonstone City, Stardust State 12345</span>
-                </p>
-            </div>
-            <div id="virtual-info">
-                <div class="wrapper">
-                    <div id="email-input">
-                        <input type="email" name="" id="" placeholder="Email">
-                    </div>
-                    <BasicButton :type="3" :text="'Subscribe to news'" />
+            <div id="contact-columns">
+                <div id="address-column">
+                    <h4 id="contact-title">Address:</h4>
+                    <p id="address-info">
+                        <span id="message">57 Sunnyside Road, Crawford, Cape Town, 7780</span>
+                    </p>
+                </div>
+                <div id="phone-column">
+                    <h4 id="contact-title">Phone:</h4>
+                    <p id="phone-info">
+                        <span id="message">+27 81 554 1536</span>
+                    </p>
+                </div>
+                <div id="email-column">
+                    <h4 id="contact-title">Email:</h4>
+                    <p id="email-info">
+                        <span id="message">info@kaizentech.com</span>
+                    </p>
                 </div>
             </div>
         </div>
         <div id="socials" class="alt" v-if="WidthMobile()">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/kaizen-tech-za/" target="_blank" rel="noopener noreferrer">
                 <picture class="component logo">
                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.317757 17H3.81308V5.68438H0.317757V17Z" fill="#191A23" />
@@ -93,28 +85,33 @@
                     </svg>
                 </picture>
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61579457152761" target="_blank" rel="noopener noreferrer">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M30 15.0913C30 6.75456 23.2863 0 15 0C6.71371 0 0 6.75456 0 15.0913C0 22.6369 5.44355 28.9047 12.6411 30V19.4726H8.83064V15.0913H12.6411V11.8053C12.6411 8.03245 14.879 5.90264 18.2661 5.90264C19.9597 5.90264 21.6532 6.2069 21.6532 6.2069V9.91886H19.7782C17.9032 9.91886 17.2984 11.0751 17.2984 12.2921V15.0913H21.4718L20.8065 19.4726H17.2984V30C24.496 28.9047 30 22.6369 30 15.0913Z"
                         fill="white" />
                 </svg>
             </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/kaizentechnologyza/" target="_blank" rel="noopener noreferrer">
                 <picture class="component logo">
-                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M15.9961 4.4915C16.6854 3.97449 17.3058 3.35409 17.7884 2.63028C17.168 2.90602 16.4442 3.11282 15.7204 3.18176C16.4786 2.73369 17.0301 2.04435 17.3058 1.18267C16.6165 1.59628 15.8238 1.90648 15.031 2.07881C14.3417 1.35501 13.4111 0.941406 12.3771 0.941406C10.378 0.941406 8.75804 2.56135 8.75804 4.56043C8.75804 4.83617 8.79251 5.1119 8.86144 5.38764C5.86282 5.2153 3.1744 3.76769 1.38212 1.59628C1.07192 2.11328 0.899586 2.73369 0.899586 3.42302C0.899586 4.66383 1.51999 5.76677 2.51953 6.42165C1.93359 6.38718 1.34766 6.24931 0.86512 5.97358V6.00804C0.86512 7.76585 2.10593 9.21346 3.76034 9.55813C3.48461 9.62707 3.13994 9.696 2.82973 9.696C2.58847 9.696 2.38166 9.66154 2.1404 9.62707C2.58847 11.0747 3.93267 12.1087 5.51815 12.1432C4.27734 13.1082 2.72633 13.6942 1.03745 13.6942C0.727252 13.6942 0.451517 13.6597 0.175781 13.6252C1.76126 14.6592 3.65694 15.2452 5.72495 15.2452C12.3771 15.2452 15.9961 9.76494 15.9961 4.97403C15.9961 4.8017 15.9961 4.66383 15.9961 4.4915Z"
-                            fill="black" />
-                    </svg>
+                    <img src="/logo/IG.svg" alt="Instagram" width="18" height="18" />
                 </picture>
             </a>
         </div>
         <div id="rights">
-            <p id="copyright">
-                © 2023 Positivus. All Rights Reserved.
-            </p>
-            <NavLinkButton :text="'Privacy Policy'" :type="2" />
+            <div id="footer-bottom">
+                <p id="copyright">
+                    © 2025 Kaizen Technology. All rights reserved.
+                </p>
+                <div id="policy-links">
+                    <RouterLink to="/privacy-policy">
+                        <NavLinkButton :text="'Privacy Policy'" :type="2" />
+                    </RouterLink>
+                    <RouterLink to="/terms-of-service">
+                        <NavLinkButton :text="'Terms of Service'" :type="2" />
+                    </RouterLink>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -122,6 +119,7 @@
 <script setup>
 import Logo from '../Logo/Logo.vue';
 import NavLinkButton from '../Buttons/NavLinkButton/NavLinkButton.vue';
+import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 
 const width = ref(0);
@@ -178,7 +176,7 @@ footer {
 
 #socials .logo {
     aspect-ratio: 1;
-    background-color: var(--white);
+    background-color: transparent;
     border-radius: 50%;
     height: 30px;
     display: flex;
@@ -192,6 +190,14 @@ footer {
     width: auto;
 }
 
+#socials .logo svg path {
+    fill: var(--white);
+}
+
+#socials .logo img {
+    filter: brightness(0) invert(1);
+}
+
 #socials a>svg>path {
     transition: 0.2s;
 }
@@ -199,26 +205,40 @@ footer {
 #contacts {
     display: flex;
     align-items: center;
-    gap: 80px;
+    justify-content: center;
 }
 
-#physical-info {
-    max-width: 350px;
+#contact-columns {
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+
+#address-column,
+#phone-column,
+#email-column {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+    text-align: center;
 }
 
-#physical-info #contact-title {
+#contact-title {
     background-color: var(--primary-color);
     border-radius: 7px;
     width: max-content;
     padding: 0 7px;
     margin-bottom: 7px;
     color: var(--white);
+    margin: 0 auto 7px auto;
 }
 
-#physical-info p {
+#address-column p,
+#phone-column p,
+#email-column p {
     color: var(--white);
 }
 
@@ -264,9 +284,23 @@ footer {
     border-top: 2px solid var(--white);
     color: var(--white);
     padding-top: 50px;
+}
+
+#footer-bottom {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
     align-items: center;
+    gap: 30px;
+}
+
+#policy-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#policy-links a {
+    text-decoration: none;
 }
 
 /* LISTENERS */
@@ -284,6 +318,19 @@ footer {
         flex-direction: column;
         align-items: initial;
         gap: 50px;
+    }
+    
+    #contact-columns {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    #address-column,
+    #phone-column,
+    #email-column {
+        text-align: center;
+        max-width: 300px;
     }
 }
 
@@ -354,6 +401,16 @@ footer {
 
     #rights {
         flex-direction: column;
+    }
+    
+    #footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #policy-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 </style>
