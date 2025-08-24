@@ -6,19 +6,34 @@
             </picture>
             <ul id="links">
                 <li class="link">
-                    <NavLinkButton :text="'About'" :type="2" />
+                    <a href="#services" @click="scrollToSection('services')">
+                        <NavLinkButton :text="'Services'" :type="2" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Services'" :type="2" />
+                    <a href="#projects" @click="scrollToSection('projects')">
+                        <NavLinkButton :text="'Projects'" :type="2" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Use Cases'" :type="2" />
+                    <a href="#software" @click="scrollToSection('software')">
+                        <NavLinkButton :text="'Software'" :type="2" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Pricing'" :type="2" />
+                    <a href="#faq-section" @click="scrollToSection('faq-section')">
+                        <NavLinkButton :text="'FAQs'" :type="2" />
+                    </a>
                 </li>
                 <li class="link">
-                    <NavLinkButton :text="'Blog'" :type="2" />
+                    <RouterLink :to="{ name: 'help' }">
+                        <NavLinkButton :text="'Help'" :type="2" />
+                    </RouterLink>
+                </li>
+                <li class="link">
+                    <a href="https://app.kaizenams.co.za/login/" target="_blank">
+                        <NavLinkButton :text="'Login'" :type="2" />
+                    </a>
                 </li>
             </ul>
             <div id="socials" v-if="!WidthMobile()">
@@ -139,6 +154,27 @@ function WidthMobile() {
 
     if (width.value < 1040) return true;
     return false;
+}
+
+const scrollToSection = (sectionId) => {
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+        window.location.href = `/#${sectionId}`;
+        return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Additional offset to ensure we're at the very top of the section
+        setTimeout(() => {
+            window.scrollBy(0, -120);
+        }, 100);
+    }
 };
 </script>
 
