@@ -1,7 +1,7 @@
 <template>
     <section id="team">
         <SectionTitle :title="'The Team'"
-            :desc="'Meet the skilled and experienced team behind our successful digital marketing strategies'"
+            :desc="'Meet the skilled and experienced team behind Kaizen Technology\'s innovative software solutions'"
             class="title" />
         <div class="team-info">
             <TeamInfo v-for="profile in teamProfile" :name="profile.name" :title="profile.title" :desc="profile.desc"
@@ -16,50 +16,36 @@
 <script setup>
 import TeamInfo from '@/components/Cards/TeamInfo.vue';
 
-import teamProfile1 from '/img/img-team-mouckup-1.png';
-import teamProfile2 from '/img/img-team-mouckup-2.png';
-import teamProfile3 from '/img/img-team-mouckup-3.png';
-import teamProfile4 from '/img/img-team-mouckup-4.png';
-import teamProfile5 from '/img/img-team-mouckup-5.png';
-import teamProfile6 from '/img/img-team-mouckup-6.png';
+import rashaadImage from '/assets/Rashaad.jpg';
+import reshadImage from '/assets/Reshad.jpg';
+import abrarImage from '/assets/Abrar.png';
+import zakImage from '/assets/Zak.png';
 
 const teamProfile = [
     {
-        name: 'John Smith',
-        title: 'CEO and Founder',
-        desc: '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
-        img: teamProfile1
+        name: 'Rashaad Meyer',
+        title: 'CEO',
+        desc: 'Rashaad Meyer is a seasoned software engineer with a passion for cutting-edge technology. Graduating with Honors in Mechatronics Engineering and Masters in AI from UCT, he brings a solid academic foundation to Kaizen Technologies. With expertise in software design, Cloud Computing, and DevOps, he excels in developing robust solutions that drive business success and customer satisfaction. His commitment to innovation ensures Kaizen Technologies remains at the forefront of technological advancement.',
+        img: rashaadImage
     },
     {
-        name: 'Jane Doe',
-        title: 'Director of Operations',
-        desc: '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
-        img: teamProfile2
+        name: 'Reshad Amin',
+        title: 'COO',
+        desc: 'Reshad Amin is a dynamic software engineer whose expertise extends beyond traditional coding. Armed with a degree in Mechatronics Engineering from UCT, Reshad combines technical prowess with project management and operations skills. With a rich background in industry-level software engineering, he excels at identifying and implementing efficiencies that enhance performance. His unique perspective in healthcare technology positions Kaizen Technologies as a leader in healthcare tech innovation.',
+        img: reshadImage
     },
     {
-        name: 'Michael Brown',
-        title: 'SEO Specialist',
-        desc: '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
-        img: teamProfile3,
+        name: 'Abrar Hoque',
+        title: 'Software Engineer',
+        desc: 'Abrar Hoque is a newly graduated software engineer with an impressive portfolio in website development and UI design. Skilled in frontend development and client management, Abrar brings great potential and multifaceted skills to Kaizen Technologies. His expertise in creating intuitive user interfaces and seamless user experiences makes him a valuable asset in delivering cutting-edge software solutions across healthcare, retail, and enterprise sectors.',
+        img: abrarImage
     },
     {
-        name: 'Emily Johnson',
-        title: 'PP3Manager',
-        desc: '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
-        img: teamProfile4,
-    },
-    {
-        name: 'Brian Willians',
-        title: 'Social Media Specialist',
-        desc: '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
-        img: teamProfile5,
-    },
-    {
-        name: 'Sarah Kim',
-        title: 'Content Creator',
-        desc: '2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries',
-        img: teamProfile6,
-    },
+        name: 'Zak Meyer',
+        title: 'Software Engineer',
+        desc: 'Zak is an accomplished Data Scientist with a passion for building intelligent systems that solve real-world problems. Holding a Master of Science in Engineering with Distinction from UCT, his research specialized in advanced computer vision. With industry experience from Capitec and AWS Cloud Practitioner certification, Zak is an expert in deploying scalable AI solutions. At Kaizen, he leads our technical vision, driving innovation through state-of-the-art AI and machine learning.',
+        img: zakImage
+    }
 ];
 </script>
 

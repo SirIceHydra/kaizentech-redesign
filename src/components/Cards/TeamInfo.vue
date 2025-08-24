@@ -41,12 +41,12 @@ const props = defineProps({
 
 <style scoped>
 .--_component-template {
-    flex-basis: calc(33% - 40px);
+    flex-basis: calc(50% - 20px);
     flex-shrink: 1;
     flex-grow: 1;
 
     min-width: 320px;
-    height: 380px;
+    height: 520px;
 }
 
 .team-info-card {
@@ -83,6 +83,24 @@ const props = defineProps({
     right: 35px;
 }
 
+#profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 420px) {
     .--_component-template {
@@ -98,6 +116,11 @@ const props = defineProps({
     #top {
         gap: 10px;
         align-items: end;
+    }
+    
+    #profile {
+        width: 60px;
+        height: 60px;
     }
 }
 </style>
