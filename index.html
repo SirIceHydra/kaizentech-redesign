@@ -188,23 +188,104 @@
     <script>
       window.addEventListener('DOMContentLoaded', function () {
         if (window.VANTA && window.VANTA.BIRDS) {
-          window.vantaEffect = window.VANTA.BIRDS({
+          // Detect if device is mobile
+          const isMobile = window.innerWidth <= 768;
+          const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+          
+          // Base configuration
+          const baseConfig = {
             el: '#vanta-bg',
-            mouseControls: true,
-            touchControls: true,
+            mouseControls: !isMobile,  // Disable mouse controls on mobile for better performance
+            touchControls: isMobile,   // Enable touch controls only on mobile
             gyroControls: false,
+            backgroundColor: 0xffffff,
+            color1: 0x611f69,
+            color2: 0x4682b4,
+          };
+          
+          // Mobile-optimized configuration
+          const mobileConfig = {
+            ...baseConfig,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 0.7,
+            scaleMobile: 0.7,
+            birdSize: 0.35,
+            separation: 60.00,   // Increased separation for better dispersion
+            alignment: 0.7,      // Reduced alignment for more natural movement
+            cohesion: 0.5,       // Lower cohesion to prevent clumping
+            quantity: 1.00       // Reduced to just 1 bird for mobile
+          };
+          
+          // Tablet configuration (middle ground)
+          const tabletConfig = {
+            ...baseConfig,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 0.85,
+            scaleMobile: 0.85,
+            birdSize: 0.45,
+            separation: 70.00,
+            alignment: 0.85,
+            cohesion: 0.75,
+            quantity: 2.00       // Reduced from 3 to 2 birds for tablet
+          };
+          
+          // Desktop configuration
+          const desktopConfig = {
+            ...baseConfig,
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            backgroundColor: 0xffffff,
-            color1: 0x611f69,
-            color2: 0x4682b4,
             birdSize: 0.50,
             separation: 100.00,
             alignment: 1.00,
             cohesion: 1.00,
             quantity: 2.00
+          };
+          
+          // Choose configuration based on screen size
+          let config;
+          if (isMobile) {
+            config = mobileConfig;
+          } else if (isTablet) {
+            config = tabletConfig;
+          } else {
+            config = desktopConfig;
+          }
+          
+          window.vantaEffect = window.VANTA.BIRDS(config);
+          
+          // Handle resize events to update configuration
+          let resizeTimeout;
+          let currentConfig = config;
+          
+          window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+              const newIsMobile = window.innerWidth <= 768;
+              const newIsTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+              
+              let newConfig;
+              if (newIsMobile) {
+                newConfig = mobileConfig;
+              } else if (newIsTablet) {
+                newConfig = tabletConfig;
+              } else {
+                newConfig = desktopConfig;
+              }
+              
+              // Only recreate if configuration actually changed
+              if (newConfig !== currentConfig && window.vantaEffect) {
+                // Destroy current effect
+                window.vantaEffect.destroy();
+                
+                // Create new effect with updated configuration
+                window.vantaEffect = window.VANTA.BIRDS(newConfig);
+                currentConfig = newConfig;
+              }
+            }, 300); // Slightly longer debounce for better performance
           });
         }
       });
