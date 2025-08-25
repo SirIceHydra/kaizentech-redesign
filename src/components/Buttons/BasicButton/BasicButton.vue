@@ -133,6 +133,4 @@ function BackgroundAnimation() {
 }
 
 .basic-btn.type-3:hover #text { }
-
-;
 </style>

@@ -156,6 +156,14 @@ const scrollToSection = (sectionId) => {
     scroll-margin-top: 120px;
 }
 
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+    #navbar {
+        background: linear-gradient(135deg, rgba(243,243,243,0.95) 0%, rgba(243,243,243,0.9) 100%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+}
+
 #left {
     display: flex;
     align-items: center;

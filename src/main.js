@@ -7,6 +7,7 @@ import BasicButton from './components/Buttons/BasicButton/BasicButton.vue';
 import SectionTitle from './components/SectionTitle/SectionTitle.vue';
 import InfoCard from './components/Cards/InfoCard.vue';
 
+import './styles/main.css';
 import './styles/main-responsive.css';
 
 const app = createApp(App);
