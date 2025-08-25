@@ -19,14 +19,26 @@ const props = defineProps({
     placeholder: { type: String },
     isRequired: { type: Boolean, default: false },
     isTextArea: { type: Boolean, default: false },
-    id: { type: String }
+    id: { type: String },
+    modelValue: { type: String, default: '' }
 });
 
-const emit = defineEmits([ 'validation' ]);
+const emit = defineEmits([ 'validation', 'update:modelValue' ]);
 
-const inputValue = ref('');
+const inputValue = ref(props.modelValue);
 const isFocus = ref(false);
 const isShow = ref(false);
+
+// Watch for external changes to modelValue
+watch(() => props.modelValue, (newValue) => {
+    inputValue.value = newValue;
+});
+
+// Watch for internal changes to inputValue
+watch(inputValue, (newValue) => {
+    emit('update:modelValue', newValue);
+    Validate();
+});
 
 function Validate() {
     if (props.isRequired && inputValue.value !== '') {

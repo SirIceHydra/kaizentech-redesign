@@ -82,6 +82,15 @@ const props = defineProps({
     justify-content: center;
     position: absolute;
     right: 35px;
+    transition: background-color 0.2s;
+}
+
+#logo-icon:hover {
+    background-color: var(--primary-color);
+}
+
+#logo-icon:hover svg path {
+    fill: var(--white);
 }
 
 #profile {
