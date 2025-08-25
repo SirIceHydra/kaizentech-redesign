@@ -1,5 +1,6 @@
 <template>
     <MainLayout>
+        <SEO pageType="help" />
         <section id="help-section">
             <SectionTitle 
                 :title="'Help Center'"
@@ -30,6 +31,7 @@
 import MainLayout from '@/layouts/MainLayout.vue';
 import HelpCard from '@/components/Cards/HelpCard.vue';
 import SectionTitle from '@/components/SectionTitle/SectionTitle.vue';
+import SEO from '@/components/SEO/SEO.vue';
 
 import { useRouter } from 'vue-router';
 

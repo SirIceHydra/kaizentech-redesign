@@ -1,10 +1,12 @@
 <template>
+  <SEO pageType="home" />
   <RouterView />
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
 import { onMounted } from 'vue'
+import SEO from '@/components/SEO/SEO.vue'
 
 onMounted(() => {
     // Handle hash navigation on page load

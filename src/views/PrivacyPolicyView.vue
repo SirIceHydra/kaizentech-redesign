@@ -1,5 +1,6 @@
 <template>
     <MainLayout>
+        <SEO pageType="privacy" />
         <section id="privacy-policy-section">
             <SectionTitle 
                 :title="'Privacy Policy'"
@@ -71,6 +72,7 @@
 <script setup>
 import MainLayout from '@/layouts/MainLayout.vue';
 import SectionTitle from '@/components/SectionTitle/SectionTitle.vue';
+import SEO from '@/components/SEO/SEO.vue';
 </script>
 
 <style scoped>
@@ -133,6 +135,13 @@ import SectionTitle from '@/components/SectionTitle/SectionTitle.vue';
 
 .list li {
     margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    line-height: 1.6;
 }
 
 /* Mobile Responsive */

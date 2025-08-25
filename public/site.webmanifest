@@ -1,0 +1,30 @@
+{
+  "name": "Kaizen Technology - Full-Service Digital Agency | Web Development, Apps & Marketing",
+  "short_name": "Kaizen Tech",
+  "description": "Leading digital agency in South Africa. We specialize in custom website development, mobile apps, e-commerce solutions, social media marketing, and healthcare software for businesses of all sizes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4682b4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favico/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favico/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favico/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}

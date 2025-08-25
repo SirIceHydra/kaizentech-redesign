@@ -1,5 +1,6 @@
 <template>
     <MainLayout>
+        <SEO pageType="terms" />
         <section id="terms-of-service-section">
             <SectionTitle 
                 :title="'Terms of Service'"
@@ -51,7 +52,7 @@
 
                 <h2 class="subheading">8. Changes to These Terms</h2>
                 <p class="paragraph">
-                    We reserve the right to update these terms from time to time. Any changes will be communicated to users via email and will be posted on this page. Continued use of our services after the changes are made constitutes acceptance of the updated terms.
+                    We may update these terms from time to time. Any changes will be communicated to users via email and will be posted on this page. Continued use of our services after the changes are made constitutes acceptance of the updated terms.
                 </p>
 
                 <h2 class="subheading">9. Contact Information</h2>
@@ -66,6 +67,7 @@
 <script setup>
 import MainLayout from '@/layouts/MainLayout.vue';
 import SectionTitle from '@/components/SectionTitle/SectionTitle.vue';
+import SEO from '@/components/SEO/SEO.vue';
 </script>
 
 <style scoped>
@@ -117,6 +119,13 @@ import SectionTitle from '@/components/SectionTitle/SectionTitle.vue';
     font-weight: bold;
     margin: 40px 0 20px 0;
     line-height: 1.3;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    opacity: 0.8;
 }
 
 /* Mobile Responsive */
