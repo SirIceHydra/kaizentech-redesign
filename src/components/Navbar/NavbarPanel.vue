@@ -3,6 +3,11 @@
         <ul id="links" v-if="isMobile" @click.stop>
             <button class="close-btn" aria-label="Close" @click.stop="emits('closeNavbarPanel')">×</button>
             <li class="link">
+                <a href="#" @click="scrollToTop(); emits('closeNavbarPanel')">
+                    <NavLinkButton :text="'Home'" />
+                </a>
+            </li>
+            <li class="link">
                 <a href="#services" @click="scrollToSection('services'); emits('closeNavbarPanel')">
                     <NavLinkButton :text="'Services'" />
                 </a>
@@ -72,6 +77,13 @@ const scrollToSection = (sectionId) => {
             window.scrollBy(0, -120);
         }, 100);
     }
+};
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 };
 </script>
 

@@ -8,6 +8,11 @@
         <div id="right">
             <ul id="links">
                 <li class="link">
+                    <a href="#" @click="scrollToTop">
+                        <NavLinkButton :text="'Home'" />
+                    </a>
+                </li>
+                <li class="link">
                     <a href="#services" @click="scrollToSection('services')">
                         <NavLinkButton :text="'Services'" />
                     </a>
@@ -80,6 +85,10 @@ const scrollToSection = (sectionId) => {
             window.scrollBy(0, -120);
         }, 100);
     }
+};
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 </script>
 
@@ -167,7 +176,13 @@ const scrollToSection = (sectionId) => {
 #left {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 #left .logo {
