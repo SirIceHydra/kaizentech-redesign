@@ -60,6 +60,12 @@ function Expand() {
     align-items: center;
 }
 
+#title {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
 .top {
     display: flex;
     align-items: center;
@@ -121,6 +127,11 @@ function Expand() {
     .expand-line {
         height: 3px;
         width: 25px;
+    }
+
+    #title {
+        font-size: 20px;
+        line-height: 1.3;
     }
 }
 </style>

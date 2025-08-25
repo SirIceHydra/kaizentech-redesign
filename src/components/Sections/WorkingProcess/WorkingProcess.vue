@@ -1,7 +1,7 @@
 <template>
     <section id="faq-section">
         <SectionTitle :title="'FAQ'"
-            :desc="'Frequently asked questions about our services'"
+            :desc="'Frequently asked questions about our services and products'"
             class="title" />
         
         <div class="faq-grid">

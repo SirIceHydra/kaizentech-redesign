@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="component simple-link-btn" @mouseenter="Animate()" @mouseleave="Animate()" >
+    <button type="button" class="component simple-link-btn" @mouseenter="Animate()" @mouseleave="Animate()" @click="scrollToContact">
         <span id="text"><span id="learn" :class="{ hover: isHover }" >Learn</span> More</span>
         <span id="icon">
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,6 +19,13 @@ const isHover = ref(false);
 function Animate() {
     isHover.value = !isHover.value;
 }
+
+const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-access');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
     <section id="services">
         <SectionTitle :title="'Services'"
-            :desc="'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:'"
+            :desc="'From healthcare SaaS specialists to full-service digital partners, we deliver comprehensive solutions that drive growth. Our expertise spans custom development, digital marketing, and strategic consulting:'"
             class="title" />
         <div class="info">
             <InfoCard 

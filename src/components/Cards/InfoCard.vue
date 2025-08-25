@@ -4,7 +4,7 @@
             <h3 id="info-title">{{ title }}</h3>
             <p id="info-desc" v-if="description">{{ description }}</p>
             <MoreButton :dark-button="button.darkButton" :dark-text="button.darkText" :dark-text-bg="button.darkTextBg"
-                :icon-type-bg="button.iconTypeBg" />
+                :icon-type-bg="button.iconTypeBg" @click="scrollToContact" />
             <img :src="src" :alt="alt">
         </div>
     </InfoCardTemplate>
@@ -27,6 +27,13 @@ const props = defineProps({
 const button = ref(null);
 
 ButtonType();
+
+const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-access');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 
 function ButtonType() {
     if (props.type === 1) {
@@ -74,6 +81,10 @@ function ButtonType() {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+}
+
+.info-card .more-btn {
+    margin-top: 20px;
 }
 
 .info-card #info-title {

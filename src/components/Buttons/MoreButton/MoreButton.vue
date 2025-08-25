@@ -1,5 +1,5 @@
 <template>
-    <div class="component more-btn">
+    <div class="component more-btn" @click="scrollToContact">
         <picture id="icon" v-if="darkButton">
             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20.5" cy="20.5" r="20.5" fill="#191A23" />
@@ -29,6 +29,13 @@ const props = defineProps({
     darkTextBg: { type: Boolean, default: true },
     iconTypeBg: { type: Number, default: 1 }
 });
+
+const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-access');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 </script>
 
 <style scoped>
