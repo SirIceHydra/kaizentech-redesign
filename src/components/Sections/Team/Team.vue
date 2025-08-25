@@ -43,7 +43,7 @@ const teamProfile = [
     {
         name: 'Zak Meyer',
         title: 'Software Engineer',
-        desc: 'Zak is an accomplished Data Scientist with a passion for building intelligent systems that solve real-world problems. Holding a Master of Science in Engineering with Distinction from UCT, his research specialized in advanced computer vision. With industry experience from Capitec and AWS Cloud Practitioner certification, Zak is an expert in deploying scalable AI solutions. At Kaizen, he leads our technical vision, driving innovation through state-of-the-art AI and machine learning.',
+        desc: 'Zak is an accomplished Data Scientist with a passion for building intelligent systems that solve real-world problems. Holding a Masters Degree in Engineering with Distinction from UCT, his research specialized in advanced computer vision. With experience in the banking industry, with expertise in Cloud Technologies, Zak is an expert in deploying scalable AI solutions. At Kaizen, he leads our technical vision, driving innovation through state-of-the-art AI and machine learning.',
         img: zakImage,
         linkedinUrl: 'https://www.linkedin.com/in/zak-meyer/'
     }
