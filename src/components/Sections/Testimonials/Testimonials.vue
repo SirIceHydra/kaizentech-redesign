@@ -1,7 +1,7 @@
 <template>
     <section id="testimonials">
         <SectionTitle :title="'Testimonials'"
-            :desc="'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services'"
+            :desc="'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Software Development and Digital Solutions'"
             class="title" />
         <div class="testimonies">
             <CommentCarousel />

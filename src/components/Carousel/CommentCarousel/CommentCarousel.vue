@@ -46,33 +46,33 @@ const centerValue = ref(20);
 const comments = ref([
     {
         id: 1,
-        author: 'John Smith',
-        job: 'Marketing Director at XYZ Corp',
-        comment: 'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.'
+        author: 'Safiyah Hassan',
+        job: 'Founder at SH Dietitians',
+        comment: 'Kaizen Technology transformed our practice with a beautiful, professional website and seamless booking system. The team was incredibly responsive and understood exactly what we needed. Our clients love the easy booking process, and we\'ve seen a significant increase in online appointments since the launch. Highly recommend their services!'
     },
     {
         id: 2,
-        author: 'John Smith',
-        job: 'Marketing Director at XYZ Corp',
-        comment: 'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.'
+        author: 'Saidur Molla',
+        job: 'Owner at Invictus Nutrition',
+        comment: 'Working with Kaizen Technology was a game-changer for our business. They built us a stunning website with a robust e-commerce backend and helped us establish a strong social media presence. The team is professional, creative, and truly understands the health and fitness industry. Our online sales have increased dramatically since partnering with them.'
     },
     {
         id: 3,
-        author: 'John Smith',
-        job: 'Marketing Director at XYZ Corp',
-        comment: 'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.'
+        author: 'Mishqah Dollie',
+        job: 'Founder at Radiant Life Aesthetics',
+        comment: 'Kaizen Technology created a beautiful, modern website that perfectly captures our brand\'s essence. The design is elegant, user-friendly, and has helped us attract more clients. The team was professional, creative, and delivered exactly what we envisioned. Our online presence has never been stronger!'
     },
     {
         id: 4,
-        author: 'John Smith',
-        job: 'Marketing Director at XYZ Corp',
-        comment: 'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.'
+        author: 'Payal Ramraj',
+        job: 'Dr. Payal - Healthcare Professional',
+        comment: 'Kaizen Technology delivered an exceptional website and booking system that has revolutionized how we manage our practice. The booking system is intuitive for both us and our patients, and the website design is professional and trustworthy. The team was responsive throughout the entire process and continues to provide excellent support.'
     },
     {
         id: 5,
-        author: 'John Smith',
-        job: 'Marketing Director at XYZ Corp',
-        comment: 'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.'
+        author: 'Gregg Barrett',
+        job: 'Founder at Womanon',
+        comment: 'Kaizen Technology exceeded our expectations with the websites they created for us. The designs are modern, functional, and perfectly aligned with our brand vision. The team\'s attention to detail and commitment to quality is outstanding. They truly understand how to create digital experiences that drive results.'
     }
 ]);
 
